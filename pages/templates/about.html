@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}À propos de moi{% endblock %}
+
+{% block content %}
+
+<style>
+    .about-section {
+        background-color: #f8fafc;
+        overflow-x: hidden;
+    }
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+        border-left: 3px solid #f9f5f5;
+    }
+    .timeline .event {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+   /* .timeline .event::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: #0d6efd;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 0 0 2px #0d6efd;
+    } */
+    .skill-badge {
+        background-color: #e9f5ff;
+        color: #0d6efd;
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 0.85rem;
+    }
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    }
+    .social-icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+        color: #0d6efd;
+        transition: transform 0.2s;
+    }
+    .social-icon:hover {
+        transform: scale(1.2);
+    }
+</style>
+
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <!-- Header avec photo de profil -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-3 text-center">
+                <img src="{% static 'images/profile.jpg' %}" alt="Photo de profil" class="profile-img mb-3 mb-md-0">
+            </div>
+            <div class="col-md-9">
+                <h1 class="display-4 fw-bold text-primary">À propos de moi</h1>
+                <p class="lead text-muted">Expert en solutions décisionnelles & Data Analyst</p>
+                <div class="d-flex mt-3">
+                    <a href="https://github.com/ton_profil" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
+                    <a href="https://linkedin.com/in/ton_profil" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="bg-white p-4 rounded-3 shadow-sm card-hover">
+                    <p class="fs-5 mb-0">
+                        Passionné par les solutions décisionnelles, je mets à profit une solide expertise dans le développement de projets data, intervenant sur l'ensemble du parcours de la donnée, de son extraction à son exploitation à travers des visualisations avancées.
+                        Mon parcours couvre la modélisation, l'intégration (ETL) et l'analyse prédictive, garantissant des solutions complètes et adaptées aux enjeux métiers.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences et certifications -->
+        <div class="row gy-4 mb-5">
+            <!-- Compétences techniques -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm card-hover">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-tools fs-2 text-primary me-3"></i>
+                            <h3 class="card-title mb-0">Compétences techniques</h3>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="fw-bold">Outils BI:</h6>
+                            <span class="skill-badge">Microsoft Fabric</span>
+                            <span class="skill-badge">Informatica Cloud/Powercenter</span>
+                            <span class="skill-badge">Power BI</span>
+                            <span class="skill-badge">SQL Server</span>
+                            <span class="skill-badge">Oracle</span>
+                            <span class="skill-badge">Control-M</span>
+                            <span class="skill-badge">Control-M</span>
+                            <span class="skill-badge">Visual Studio Code</span>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="fw-bold">Langages:</h6>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">SQL/T-SQL</span>
+                            <span class="skill-badge">DAX</span>
+                            <span class="skill-badge">PowerShell</span>
+                            <span class="skill-badge">M</span>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold">Méthodologies de projet:</h6>
+                            <span class="skill-badge">Traditionnelle</span>
+                            <span class="skill-badge">Agile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications et langues -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm card-hover">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-award-fill fs-2 text-success me-3"></i>
+                            <h3 class="card-title mb-0">Certifications</h3>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-microsoft text-primary me-2"></i>
+                                <a href="https://learn.microsoft.com/en-us/credentials/certifications/dp-600/" target="_blank" class="fw-bold text-decoration-none text-dark">Microsoft Fabric (DP-600)</a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-microsoft text-primary me-2"></i>
+                                <a href="https://learn.microsoft.com/en-us/credentials/certifications/power-bi-data-analyst-associate/" target="_blank" class="fw-bold text-decoration-none text-dark">Microsoft Power BI (PL-300)</a>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3 mt-4">
+                            <i class="bi bi-translate fs-2 text-info me-3"></i>
+                            <h3 class="card-title mb-0">Langues</h3>
+                        </div>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="small mb-3">Français (langue maternelle)</p>
+                        
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="small mb-0">Anglais (niveau professionnel courant)/TOEIC : 861</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expériences professionnelles -->
+<div class="mb-5">
+    <div class="d-flex align-items-center mb-4">
+        <i class="bi bi-briefcase-fill fs-2 text-primary me-3"></i>
+        <h2 class="mb-0">Expériences professionnelles</h2>
+    </div>
+
+    <div class="row gy-4">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm card-hover bg-white">
+                <div class="card-body">
+                    <h4 class="mb-1 text-dark fw-bold">Data Analyst – BALAS</h4>
+                    <div class="d-flex flex-wrap mb-2">
+                        <span class="badge bg-light text-dark me-2 mb-1">Power BI</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Microsoft Fabric</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">SQL Server</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Power Automate</span>
+                    </div>
+                    <ul class="mb-0">
+                        <li>Modélisation sémantique (étoile), développement DAX et création de rapports interactifs avec KPIs</li>
+                        <li>Implémentation de la sécurité RLS/OLS et automatisation des processus avec Dataflows</li>
+                        <li>Déploiement sur Power BI Services et intégration avec Data Factory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm card-hover bg-white">
+                <div class="card-body">
+                    <h4 class="mb-1 text-dark fw-bold">Consultant Informatica – APEC</h4>
+                    <div class="d-flex flex-wrap mb-2">
+                        <span class="badge bg-light text-dark me-2 mb-1">Informatica Cloud</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">PowerCenter</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Oracle 11g</span>
+                    </div>
+                    <ul class="mb-0">
+                        <li>TMA niveau 3 et alimentation du Data Warehouse et de Salesforce</li>
+                        <li>Rédaction de spécifications techniques et optimisation des requêtes SQL</li>
+                        <li>Gestion des livraisons en environnement de production</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Projets personnels -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-lightbulb-fill fs-2 text-primary me-3"></i>
+                <h2 class="mb-0">Projets personnels</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="https://github.com/ton_profil/portfolio" target="_blank" class="text-decoration-none text-dark">
+                        <div class="card h-100 border-0 shadow-sm card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-code-slash fs-3 text-primary me-3"></i>
+                                    <h4 class="mb-0">Site web personnel</h4>
+                                </div>
+                                <p>Développement complet d'un site web avec Django (Python) incluant un portfolio, un blog technique et une section contact.</p>
+                                <div class="mt-auto">
+                                <span class="badge bg-light text-dark">Django</span>
+                                <span class="badge bg-light text-dark">Bootstrap</span>
+                                <span class="badge bg-light text-dark">PostgreSQL</span>
+                                </div>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-graph-up-arrow fs-3 text-primary me-3"></i>
+                                <h4 class="mb-0">Prédiction de matchs ATP</h4>
+                            </div>
+                            <p>Application de machine learning pour prédire les résultats de matchs de tennis professionnels avec une interface Streamlit.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-light text-dark">Python</span>
+                                <span class="badge bg-light text-dark">Scikit-learn</span>
+                                <span class="badge bg-light text-dark">Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-bar-chart-line fs-3 text-primary me-3"></i>
+                                <h4 class="mb-0">Prévision de ventes</h4>
+                            </div>
+                            <p>Solution de prévision annuelle de ventes implémentée avec PySpark sur Microsoft Fabric pour une entreprise de distribution.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-light text-dark">PySpark</span>
+                                <span class="badge bg-light text-dark">Microsoft Fabric</span>
+                                <span class="badge bg-light text-dark">Time Series</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="bg-primary text-white p-5 rounded-3 text-center">
+            <h2 class="mb-3">Pour toutes opportunités de collaboration et projets stimulants. N'hésitez pas!</h2>
+            <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-4">Contactez-moi</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

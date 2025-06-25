@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4">Contactez-moi</h1>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <p>Veuillez corriger les erreurs ci-dessous.</p>
+    </div>
+    {% endif %}
+
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="id_nom" class="form-label">Nom</label>
+                {{ form.nom }}
+                {% for error in form.nom.errors %}
+                <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_prenom" class="form-label">Prénom</label>
+                {{ form.prenom }}
+                {% for error in form.prenom.errors %}
+                <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="id_email" class="form-label">Email</label>
+            {{ form.email }}
+            {% for error in form.email.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            <label for="id_message" class="form-label">Message</label>
+            {{ form.message }}
+            {% for error in form.message.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+</div>
+{% endblock %}
+

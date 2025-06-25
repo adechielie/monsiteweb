@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Site{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Ton CSS personnalisé -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+        <header class="bg-white text-dark fw-bold p-3" style="font-family: Arial; border-bottom: 1px solid #bcbbbb;">
+            <nav class="container d-flex justify-content-between">
+                <a href="{% url 'home' %}" class="text-dark text-decoration-none">Accueil</a>
+                <a href="{% url 'about' %}" class="text-dark text-decoration-none">À propos de moi</a>
+                <a href="{% url 'services' %}" class="text-dark text-decoration-none">Services</a>
+                <a href="{% url 'contact' %}" class="text-dark text-decoration-none">Contact</a>
+            </nav>
+        </header>
+    <main class="mt-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-light text-dark text-center p-3 mt-5">
+        <p>© 2025 - Mon Site</p>
+    </footer>
+
+    <!-- Bootstrap JS (facultatif, mais utile pour certains composants) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
