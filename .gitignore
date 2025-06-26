@@ -1,0 +1,25 @@
+# Fichier de configuration sensible
+.env
+
+# Environnement virtuel
+venv_django/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cache et logs
+*.log
+*.pot
+
+# Fichiers/dossiers générés automatiquement
+staticfiles/
+static/
+
+# Migrations compilées
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# Paramètres locaux de VS Code (optionnel)
+.vscode/
