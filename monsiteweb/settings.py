@@ -140,6 +140,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "pages" / "static",
 ]
 
+# Dossier(s) où Django va copier les fichiers statiques sur ton serveur en prod
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
