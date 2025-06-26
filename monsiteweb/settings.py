@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jh2-8_0ag(*+@ezq!mf+devihru-cqz*jeivrjr24%l6nv0gz*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['todoba.net', 'www.todoba.net']
 
 
 # Application definition
