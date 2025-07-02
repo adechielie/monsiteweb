@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-jh2-8_0ag(*+@ezq!mf+devihru-cqz*jeivrjr24%l6nv0gz*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todoba.net', 'www.todoba.net']
+ALLOWED_HOSTS = ['todoba.net', 'www.todoba.net','127.0.0.1']
 
 
 # Application definition
@@ -79,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'monsiteweb',
-        'USER': 'adechi',
-        'PASSWORD': 'Idrissouzore01*',
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -93,7 +94,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-from decouple import config
 EMAIL_HOST_USER = config('EMAIL_USER')  # <- lit depuis .env
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')  # <- lit depuis .env
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

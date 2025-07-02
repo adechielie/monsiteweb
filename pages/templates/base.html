@@ -11,22 +11,42 @@
 
     <!-- Ton CSS personnalisé -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Suppression des marges par défaut du body -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
-        <header class="bg-white text-dark fw-bold p-3" style="font-family: Arial; border-bottom: 1px solid #bcbbbb;">
+        <header class="bg-dark text-white fw-bold p-3" style="font-family: Arial; border-bottom: 1px solid #bcbbbb;">
             <nav class="container d-flex justify-content-between">
-                <a href="{% url 'home' %}" class="text-dark text-decoration-none">Accueil</a>
-                <a href="{% url 'about' %}" class="text-dark text-decoration-none">À propos de moi</a>
-                <a href="{% url 'services' %}" class="text-dark text-decoration-none">Services</a>
-                <a href="{% url 'contact' %}" class="text-dark text-decoration-none">Contact</a>
+                <a href="{% url 'home' %}" class="text-white text-decoration-none">Accueil</a>
+                <a href="{% url 'about' %}" class="text-white text-decoration-none">À propos de moi</a>
+                <a href="{% url 'services' %}" class="text-white text-decoration-none">Services</a>
+                <a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact</a>
             </nav>
         </header>
     <main class="mt-4">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-light text-dark text-center p-3 mt-5">
-        <p>© 2025 - Mon Site</p>
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <div class="container">
+            <p class="mb-2">© 2025 - Ce site a été fait par Elie ADECHI. Tous droits réservés.</p>
+
+            <div class="mb-2">
+                <a href="/mentions-legales" class="text-decoration-none text-white me-3">Mentions légales</a>
+                <a href="/politique-confidentialite" class="text-decoration-none text-white me-3">Confidentialité</a>
+                <a href="/contact" class="text-decoration-none text-white">Contact</a>
+            </div>
+
+            <div>
+                <a href="https://linkedin.com" class="ms-2 text-white" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS (facultatif, mais utile pour certains composants) -->

@@ -2,9 +2,7 @@
 {% load static %}
 
 {% block title %}Bienvenue sur mon site !{% endblock %}
-
 {% block content %}
-
 <!-- INTRO avec fond bleu + motif circulaire à droite -->
 <div class="w-100 text-white py-5" style="
     background: linear-gradient(to right, #132F74, #1E3EA6);
@@ -36,8 +34,8 @@
 
         <p class="lead fw-semibold mb-4">
             Vous travaillez avec des outils puissants de la Big Data tels que 
-            <strong>Microsoft Fabric</strong>, <strong>Power BI</strong> ou <strong>Informatica PowerCenter</strong> ?<br>
-            Nous mettons à votre service notre expertise pour vous accompagner dans la mise en place, l'intégration et l’exploitation optimale de ces solutions.
+            <strong>Microsoft Fabric</strong>, <strong>Power BI</strong>, <strong>Informatica</strong>, <strong>PowerCenter</strong> sur des DWH tels que <strong>SQL Server</strong> ou encore <strong>Oracle</strong> ?<br>
+            Je mets à votre service mon expertise pour vous accompagner dans la mise en place, l'intégration et l’exploitation optimale de ces solutions.
         </p>
 
         <a href="{% url 'contact' %}" class="btn btn-light btn-lg fw-semibold">Contactez-moi</a>
@@ -48,13 +46,13 @@
 
 <!-- SECTION : Services -->
 <div class="container text-center my-5">
-    <h1 class="mb-4 text-center fw-bold" style="color: rgb(235, 82, 36);">Profitez de notre expertise !</h1>
+    <h1 class="mb-4 text-center fw-bold text-success">Profitez de mon expertise !</h1>
 </div>
 <div class="container my-5">
     <div class="row g-5 align-items-start">
         <!-- Data Engineering (colonne gauche) -->
         <div class="col-lg-6">
-            <h2 class="text-center mb-4" style="color: rgb(235, 82, 36);">Data Engineering</h2>
+            <h2 class="text-center mb-4 fw-bold text-success">Data Engineering</h2>
             <p class="lead text-info fw-semibold" style="color: black !important;">
                 Nous vous accompagnons dans la conception et la mise en œuvre de traitements ETL automatisés,
                 fiables et évolutifs, pour garantir une gestion optimale de vos flux de données.
@@ -84,7 +82,7 @@
 
         <!-- Data Analyst (colonne droite) -->
         <div class="col-lg-6">
-            <h2 class="text-center mb-4" style="color: rgb(235, 82, 36);">Data Analyst</h2>
+            <h2 class="text-center mb-4 fw-bold text-success">Data Analysis</h2>
             <p class="lead text-info fw-semibold" style="color: black !important;">
                 Nous vous accompagnons sur vos projets de création de dashboards et rapports interactifs
                 avec une expertise avérée sur Power BI.

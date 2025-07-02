@@ -6,7 +6,7 @@
 
 <style>
     .about-section {
-        background-color: #f8fafc;
+        background-color: rgba(255, 255, 255, 0.92);
         overflow-x: hidden;
     }
     .timeline {
@@ -31,7 +31,7 @@
         box-shadow: 0 0 0 2px #0d6efd;
     } */
     .skill-badge {
-        background-color: #e9f5ff;
+        background-color: #f8fafc;
         color: #0d6efd;
         padding: 5px 12px;
         border-radius: 20px;
@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-9">
                 <h1 class="display-4 fw-bold text-primary">À propos de moi</h1>
-                <p class="lead text-muted">Expert en solutions décisionnelles & Data Analyst</p>
+                <p class="lead text-muted ">Expert Data</p>
                 <div class="d-flex mt-3">
                     <a href="https://github.com/ton_profil" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
                     <a href="https://linkedin.com/in/ton_profil" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
@@ -85,7 +85,7 @@
         <!-- Introduction -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-10">
-                <div class="bg-white p-4 rounded-3 shadow-sm card-hover">
+                <div style="background-color: #f8fafc;" class="p-4 rounded-3 shadow-sm card-hover">
                     <p class="fs-5 mb-0">
                         Passionné par les solutions décisionnelles, je mets à profit une solide expertise dans le développement de projets data, intervenant sur l'ensemble du parcours de la donnée, de son extraction à son exploitation à travers des visualisations avancées.
                         Mon parcours couvre la modélisation, l'intégration (ETL) et l'analyse prédictive, garantissant des solutions complètes et adaptées aux enjeux métiers.
@@ -105,22 +105,25 @@
                             <h3 class="card-title mb-0">Compétences techniques</h3>
                         </div>
                         <div class="mb-3">
-                            <h6 class="fw-bold">Outils BI:</h6>
+                            <h6 class="fw-bold">Outils :</h6>
                             <span class="skill-badge">Microsoft Fabric</span>
                             <span class="skill-badge">Informatica Cloud/Powercenter</span>
                             <span class="skill-badge">Power BI</span>
+                            <span class="skill-badge">Power Query</span>
                             <span class="skill-badge">SQL Server</span>
                             <span class="skill-badge">Oracle</span>
                             <span class="skill-badge">Control-M</span>
-                            <span class="skill-badge">Control-M</span>
+                            <span class="skill-badge">Django</span>
                             <span class="skill-badge">Visual Studio Code</span>
+                            <span class="skill-badge">PostgreSQL</span>
+                            <span class="skill-badge">Apache2</span>
                         </div>
                         <div class="mb-3">
                             <h6 class="fw-bold">Langages:</h6>
                             <span class="skill-badge">Python</span>
                             <span class="skill-badge">SQL/T-SQL</span>
                             <span class="skill-badge">DAX</span>
-                            <span class="skill-badge">PowerShell</span>
+                            <span class="skill-badge">PowerShell/Bash</span>
                             <span class="skill-badge">M</span>
                         </div>
                         <div>
@@ -182,15 +185,21 @@
                 <div class="card-body">
                     <h4 class="mb-1 text-dark fw-bold">Data Analyst – BALAS</h4>
                     <div class="d-flex flex-wrap mb-2">
-                        <span class="badge bg-light text-dark me-2 mb-1">Power BI</span>
-                        <span class="badge bg-light text-dark me-2 mb-1">Microsoft Fabric</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Power BI Desktop/Power BI Services</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Power Query</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Microsoft Fabric - Data factory</span>
                         <span class="badge bg-light text-dark me-2 mb-1">SQL Server</span>
                         <span class="badge bg-light text-dark me-2 mb-1">Power Automate</span>
                     </div>
                     <ul class="mb-0">
-                        <li>Modélisation sémantique (étoile), développement DAX et création de rapports interactifs avec KPIs</li>
-                        <li>Implémentation de la sécurité RLS/OLS et automatisation des processus avec Dataflows</li>
-                        <li>Déploiement sur Power BI Services et intégration avec Data Factory</li>
+                        <li>Création de modèle sémantiques, développement DAX et création de rapports interactifs avec KPIs.</li>
+                        <li>Implémentation de la sécurité RLS/OLS.</li>
+                        <li>Déploiement des rapports sur Power BI Services.</li>
+                        <li>Administration des espaces de travail sur Power BI Services selon la politique de gouvernance de données en place.</li>
+                        <li>Rafraichissement des rapports + envoi par mail via Power Automate.</li>
+                        <li>Développement de plusieurs flux de transfert vers le DWH avec Microsoft Fabric Data Factory.</li>
+                        <li>Optimisation des Requêtes (SQL Server).</li>
+
                     </ul>
                 </div>
             </div>
@@ -204,11 +213,15 @@
                         <span class="badge bg-light text-dark me-2 mb-1">Informatica Cloud</span>
                         <span class="badge bg-light text-dark me-2 mb-1">PowerCenter</span>
                         <span class="badge bg-light text-dark me-2 mb-1">Oracle 11g</span>
+                        <span class="badge bg-light text-dark me-2 mb-1">Control-M</span>
                     </div>
                     <ul class="mb-0">
-                        <li>TMA niveau 3 et alimentation du Data Warehouse et de Salesforce</li>
-                        <li>Rédaction de spécifications techniques et optimisation des requêtes SQL</li>
-                        <li>Gestion des livraisons en environnement de production</li>
+                        <li>TMA niveau 3 sur Informatica Cloud et Powercenter.</li>
+                        <li>Conception et réalisation des flux Informatica cloud et Powercenter afin d’alimenter le DWH et les Objets Salesforce.</li>
+                        <li>Réalisation des évolutions.</li>
+                        <li>Livraisons Pré-production/production.</li>
+                        <li>Rédaction de spécifications fonctionnelles et techniques.</li>
+                        <li>optimisation des requêtes SQL.</li>
                     </ul>
                 </div>
             </div>
@@ -281,7 +294,7 @@
         </div>
 
         <!-- Contact CTA -->
-        <div class="bg-primary text-white p-5 rounded-3 text-center">
+        <div class="bg-success text-white p-5 rounded-3 text-center">
             <h2 class="mb-3">Pour toutes opportunités de collaboration et projets stimulants. N'hésitez pas!</h2>
             <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-4">Contactez-moi</a>
         </div>

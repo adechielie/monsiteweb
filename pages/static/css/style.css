@@ -5,33 +5,10 @@ html {
 /* ===================== */
 /*   CAROUSEL IMAGES     */
 /* ===================== */
+/* Hauteur uniforme pour les carrousels */
+
 .carousel-item img {
-    height: 300px;
-    max-width: 800px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-    margin: 0 auto;     /* ← centre l’image si elle est plus petite */
-}
-
-/* Uniformise la hauteur des carrousels */
-.carousel-inner {
-    height: 300px; /* hauteur fixe identique */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .carousel-inner {
-      height: 400px;
-    }
-}
-
-
-/* Assure que chaque slide (carousel-item) remplit le conteneur */
-.carousel-item {
-    height: 100%;
+  border-radius: 10px;
 }
 
 /* ======== BLOCK : Expert Data ======== */
@@ -80,5 +57,4 @@ section.expert-data .card p {
     background-color: #e6f4ff; /* Bleu ciel clair */
     border: 1px solid #cce5ff;
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
-    height: 100%;
 }

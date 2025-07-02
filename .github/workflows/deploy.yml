@@ -16,7 +16,13 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
         script: |
-          /srv/monsiteweb/deploy.sh
-        # première exécution : ignorer la vérification du fingerprint
-        args: "-o StrictHostKeyChecking=no"
+         cd /srv/monsiteweb
+         git fetch --all
+         git reset --hard origin/main
+         source venv_django/bin/activate
+         pip install -r requirements.txt
+         python manage.py migrate --noinput
+         python manage.py collectstatic --noinput
+         sudo systemctl reload apache2
