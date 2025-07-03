@@ -10,8 +10,6 @@ jobs:
 
     steps:
     - name: Exécuter le déploiement sur le VPS
-    - name: Debug secrets
-      run: echo "Host is ${{ secrets.VPS_HOST }}"
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.VPS_HOST }}
