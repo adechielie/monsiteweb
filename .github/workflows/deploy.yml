@@ -16,7 +16,6 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
-        fingerprint: ${{ secrets.KNOWN_HOSTS }}
         script: |
          cd /srv/monsiteweb
          git fetch --all
