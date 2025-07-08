@@ -28,8 +28,14 @@ jobs:
             EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}
             EOF
            
+            # Fixe les permissions
+            sudo chown www-data:www-data /srv/monsiteweb/.env
+            sudo chmod 600 /srv/monsiteweb/.env
+
+
             echo "== Contenu de .env =="
             cat /srv/monsiteweb/.env
+            
 
             # 3. Exécute le script de déploiement (ex: git pull + migrations)
             cd /srv/monsiteweb
