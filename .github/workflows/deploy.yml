@@ -19,7 +19,7 @@ jobs:
         script: |
             set -e
             # 1. Crée/écrase le .env avec les secrets GitHub
-            cat <<EOF > /srv/monsiteweb/.env
+            cat <<EOF | sudo tee /srv/monsiteweb/.env > /dev/null
             DEBUG=False
             SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
             DB_USER=${{ secrets.DB_USER }}
