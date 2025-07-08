@@ -27,7 +27,9 @@ jobs:
             EMAIL_USER=${{ secrets.EMAIL_USER }}
             EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}
             EOF
-        
+           
+            echo "== Contenu de .env =="
+            cat /srv/monsiteweb/.env
 
             # 3. Exécute le script de déploiement (ex: git pull + migrations)
             cd /srv/monsiteweb
