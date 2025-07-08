@@ -29,8 +29,8 @@ jobs:
             EOF
            
             # Fixe les permissions
-            sudo chown www-data:www-data /srv/monsiteweb/.env
-            sudo chmod 600 /srv/monsiteweb/.env
+            sudo /usr/bin/chown www-data:www-data /srv/monsiteweb/.env
+            sudo /usr/bin/chmod 600 /srv/monsiteweb/.env
 
 
             echo "== Contenu de .env =="
