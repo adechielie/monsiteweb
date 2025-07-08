@@ -29,10 +29,6 @@ jobs:
             EOF
         
 
-            # 2. Applique les permissions sécurisées
-            chmod 600 /srv/monsiteweb/.env  # Restreint l'accès
-            chown www-data:www-data /srv/monsiteweb/.env
-
             # 3. Exécute le script de déploiement (ex: git pull + migrations)
             cd /srv/monsiteweb
             ./deploy.sh
