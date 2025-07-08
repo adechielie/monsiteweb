@@ -19,9 +19,9 @@ jobs:
         script: |
             set -e
             # 1. Crée/écrase le .env avec les secrets GitHub
-            cat <<EOF | sudo tee /srv/monsiteweb/.env > /dev/null
+            cat <<EOF > /srv/monsiteweb/.env
             DEBUG=False
-            SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
+            DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
             DB_USER=${{ secrets.DB_USER }}
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             EMAIL_USER=${{ secrets.EMAIL_USER }}
@@ -29,12 +29,12 @@ jobs:
             EOF
            
             # Fixe les permissions
-            sudo /usr/bin/chown www-data:www-data /srv/monsiteweb/.env
-            sudo /usr/bin/chmod 600 /srv/monsiteweb/.env
+            chown deploy:www-data /srv/monsiteweb/.env
+            chmod 600 /srv/monsiteweb/.env
 
 
             echo "== Contenu de .env =="
-            sudo -u www-data /usr/bin/cat /srv/monsiteweb/.env
+            cat /srv/monsiteweb/.env
             
 
             # 3. Exécute le script de déploiement (ex: git pull + migrations)
