@@ -17,4 +17,22 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-         /srv/monsiteweb/deploy.sh
+            set -e
+            # 1. Crée/écrase le .env avec les secrets GitHub
+            cat <<EOF > /srv/monsiteweb/.env
+            DEBUG=False
+            SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
+            DB_USER=${{ secrets.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            EMAIL_USER=${{ secrets.EMAIL_USER }}
+            EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}
+            EOF
+        
+
+            # 2. Applique les permissions sécurisées
+            chmod 600 /srv/monsiteweb/.env  # Restreint l'accès
+            chown www-data:www-data /srv/monsiteweb/.env
+
+            # 3. Exécute le script de déploiement (ex: git pull + migrations)
+            cd /srv/monsiteweb
+            ./deploy.sh
