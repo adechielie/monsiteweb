@@ -26,6 +26,7 @@ jobs:
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             EMAIL_USER=${{ secrets.EMAIL_USER }}
             EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}
+            ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
             EOF
            
             # Fixe les permissions
