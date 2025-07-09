@@ -22,11 +22,11 @@ jobs:
             cat <<EOF > /srv/monsiteweb/.env
             DEBUG=False
             DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
+            ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
             DB_USER=${{ secrets.DB_USER }}
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             EMAIL_USER=${{ secrets.EMAIL_USER }}
             EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}
-            ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
             EOF
            
             # Fixe les permissions
