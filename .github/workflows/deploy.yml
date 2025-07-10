@@ -31,7 +31,7 @@ jobs:
            
             # Fixe les permissions
             chown deploy:www-data /srv/monsiteweb/.env
-            chmod 600 /srv/monsiteweb/.env
+            chmod 640 /srv/monsiteweb/.env
 
 
             echo "== Contenu de .env =="
