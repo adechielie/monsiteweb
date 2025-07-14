@@ -14,8 +14,8 @@ __pycache__/
 *.pot
 
 # Fichiers/dossiers générés automatiquement
-staticfiles/
-static/
+#staticfiles/
+#static/
 
 # Migrations compilées
 **/migrations/__pycache__/
