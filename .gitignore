@@ -18,8 +18,8 @@ __pycache__/
 #static/
 
 # Migrations compilées
-**/migrations/__pycache__/
-**/migrations/*.pyc
+#**/migrations/__pycache__/
+#**/migrations/*.pyc
 
 # Paramètres locaux de VS Code (optionnel)
 .vscode/
