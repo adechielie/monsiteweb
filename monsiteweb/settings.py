@@ -142,7 +142,6 @@ STATIC_URL = '/static/'
 # Dossier(s) où Django va chercher les fichiers statiques pendant le développement
 STATICFILES_DIRS = [
     BASE_DIR / "pages" / "static",
-    BASE_DIR / "services" / "static",
 ]
 
 # Dossier(s) où Django va copier les fichiers statiques sur ton serveur en prod
