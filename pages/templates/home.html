@@ -29,13 +29,13 @@
         <h1 class="display-4 fw-bold mb-4">Bienvenue sur mon site !</h1>
 
         <p class="lead fw-semibold mb-3">
-            Je suis Elie ADECHI, expert en data. De la construction de pipelines ETL à la création de rapports et tableaux de bord, je vous accompagne à chaque étape de vos projets.
+            Je suis Elie ADECHI, expert en data. De la construction de pipelines ETL à la création de rapports et tableaux de bord, j'interviens à chaque étape de vos projets.
         </p>
 
         <p class="lead fw-semibold mb-4">
             Vous travaillez avec des outils puissants de la Big Data tels que 
             <strong>Microsoft Fabric</strong>, <strong>Data Factory</strong>, <strong>Power BI</strong>, <strong>Informatica</strong>, <strong>PowerCenter</strong> sur des DWH tels que <strong>SQL Server</strong> ou encore <strong>Oracle</strong> ?<br>
-            Je mets à votre service mon expertise pour vous accompagner dans la mise en place, l'intégration et l’exploitation optimale de ces solutions.
+            Je mets à votre service mon expertise pour vous accompagner dans l’exploitation optimale de ces solutions.
         </p>
 
         <div class="text-center">
@@ -54,23 +54,25 @@
     <div class="row g-5 align-items-start">
         <!-- Data Engineering (colonne gauche) -->
         <div class="col-lg-6">
-            <h2 class="text-center mb-4 fw-bold text-success">Data Engineering</h2>
-            <p class="lead text-info fw-semibold" style="color: black !important;">
-                Nous vous accompagnons dans la conception et mise en œuvre de traitements ETL automatisés,
-                fiables et évolutifs, pour garantir une gestion optimale de vos données.
-            </p>
+            <a href="{% url 'services' %}#services-top-eng" class="text-decoration-none col-lg-6" style="cursor: pointer;"> 
+                <h2 class="text-center mb-4 fw-bold text-success">Data Engineering</h2>
+                <p class="lead text-info fw-semibold" style="color: black !important;">
+                    Nous vous accompagnons dans la conception et mise en œuvre de traitements ETL automatisés,
+                    fiables et évolutifs, pour garantir une gestion optimale de vos données.
+                </p>
+            </a>
 
             <!-- Carrousel Data Engineering -->
             <div id="carouselEngineering" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{% static 'images/data_eng_1.jpg' %}" class="d-block w-100" alt="Data Engineering 4">
+                        <img src="{% static 'images/data_eng_4.jpg' %}" class="d-block w-100" alt="Data Engineering 4">
                     </div>
                     <div class="carousel-item">
-                        <img src="{% static 'images/data_eng_2.jpg' %}" class="d-block w-100" alt="Data Engineering 5">
+                        <img src="{% static 'images/data_eng_5.jpg' %}" class="d-block w-100" alt="Data Engineering 5">
                     </div>
                     <div class="carousel-item">
-                        <img src="{% static 'images/data_eng_3.jpg' %}" class="d-block w-100" alt="Data Engineering 6">
+                        <img src="{% static 'images/data_eng_6.jpg' %}" class="d-block w-100" alt="Data Engineering 6">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselEngineering" data-bs-slide="prev">
@@ -84,23 +86,25 @@
 
         <!-- Data Analyst (colonne droite) -->
         <div class="col-lg-6">
-            <h2 class="text-center mb-4 fw-bold text-success">Data Analysis</h2>
-            <p class="lead text-info fw-semibold" style="color: black !important;">
-                Nous vous accompagnons dans la conception de rapports et dashboard interactifs
-                avec une expertise certifiée sur Microsoft Power BI.
-            </p>
+            <a href="{% url 'services' %}#services-top-ana" class="text-decoration-none col-lg-6" style="cursor: pointer;">
+                <h2 class="text-center mb-4 fw-bold text-success">Data Analysis</h2>
+                <p class="lead text-info fw-semibold" style="color: black !important;">
+                    Nous vous accompagnons dans la conception de rapports et dashboard interactifs
+                    avec une expertise certifiée sur Microsoft Power BI.
+                </p>
+            </a>
 
             <!-- Carrousel Data Analyst -->
             <div id="carouselAnalyst" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{% static 'images/dashboard_1.jpg' %}" class="d-block w-100" alt="Dashboard 4">
+                        <img src="{% static 'images/dashboard_4.jpg' %}" class="d-block w-100" alt="Dashboard 4">
                     </div>
                     <div class="carousel-item">
-                        <img src="{% static 'images/dashboard_2.jpg' %}" class="d-block w-100" alt="Dashboard 5">
+                        <img src="{% static 'images/dashboard_5.jpg' %}" class="d-block w-100" alt="Dashboard 5">
                     </div>
                     <div class="carousel-item">
-                        <img src="{% static 'images/dashboard_3.jpg' %}" class="d-block w-100" alt="Dashboard 6">
+                        <img src="{% static 'images/dashboard_6.jpg' %}" class="d-block w-100" alt="Dashboard 6">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselAnalyst" data-bs-slide="prev">
@@ -134,19 +138,19 @@
                     <div class="col-md-6">
                         <h6 class="fw-bold text-dark">Planification intelligente des tâches</h6>
                         <p class="fs-6">
-                            Grâce à une planification rigoureuse et automatisée des tâches, vos flux de données s’exécutent de manière optimale, évitant collisions et retards.
+                            Grâce à une planification rigoureuse et automatisée des tâches, vos flux ou raffraichissement de données s’exécutent de manière optimale, évitant collisions et retards.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <h6 class="fw-bold text-dark">Monitoring et supervision en temps réel</h6>
                         <p class="fs-6">
-                            Une surveillance constante des traitements permet de détecter rapidement les anomalies. Le monitoring assure stabilité et performance.
+                            Une surveillance constante des tâches permet de détecter rapidement les anomalies. Le monitoring assure stabilité et performance.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <h6 class="fw-bold text-dark">Reporting clair et interactif</h6>
                         <p class="fs-6">
-                            L’expert transforme les données en décisions grâce à des rapports dynamiques et des dashboards percutants et visuels.
+                            L’expert transforme les données en décisions grâce à des rapports dynamiques et des dashboards percutants et pertinents.
                         </p>
                     </div>
                 </div>

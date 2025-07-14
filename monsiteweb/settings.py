@@ -26,7 +26,11 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    host.strip() for host in 
+    config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+    if host.strip()  # Filtre les chaînes vides
+]
 
 
 # Application definition
@@ -138,6 +142,7 @@ STATIC_URL = '/static/'
 # Dossier(s) où Django va chercher les fichiers statiques pendant le développement
 STATICFILES_DIRS = [
     BASE_DIR / "pages" / "static",
+    BASE_DIR / "services" / "static",
 ]
 
 # Dossier(s) où Django va copier les fichiers statiques sur ton serveur en prod
