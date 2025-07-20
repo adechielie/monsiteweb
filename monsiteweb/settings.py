@@ -100,7 +100,8 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = config('EMAIL_USER')  # <- lit depuis .env
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')  # <- lit depuis .env
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # Adresse d'expéditeur par défaut
+CONTACT_EMAIL = EMAIL_HOST_USER # Destinataire = même que l'expéditeur 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
