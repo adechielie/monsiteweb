@@ -30,9 +30,13 @@ def contact_view(request):
             except Exception as e:
                 messages.warning(request, "Le message a été enregistré mais l'email n'a pas pu être envoyé.")
 
-            return redirect('contact')  # Redirection pour éviter le double envoi
+            return redirect('contact_succes')  # Redirection pour éviter le double envoi
     else:
         form = ContactForm()
 
     return render(request, 'contact/contact.html', {'form': form})
 
+
+#Fonction de redirection
+def contact_succes(request):
+    return render(request, 'contact/contact_succes.html')
