@@ -93,15 +93,14 @@ DATABASES = {
 
 # Configuration de l'envoi d'e-mails 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# 🔑 Identifiants OAuth Gmail (depuis Google Cloud Console + OAuth Playground)
+GMAIL_CLIENT_ID = config("GMAIL_CLIENT_ID")
+GMAIL_CLIENT_SECRET = config("GMAIL_CLIENT_SECRET")
+GMAIL_REFRESH_TOKEN = config("GMAIL_REFRESH_TOKEN")
 
-EMAIL_HOST_USER = config('EMAIL_USER')  # <- lit depuis .env
-EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')  # <- lit depuis .env
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # Adresse d'expéditeur par défaut
-CONTACT_EMAIL = EMAIL_HOST_USER # Destinataire = même que l'expéditeur 
+# 📩 Adresse de contact (où tu reçois les messages)
+DEFAULT_FROM_EMAIL = config("CONTACT_EMAIL")# Adresse d'expéditeur par défaut
+CONTACT_EMAIL = config("CONTACT_EMAIL") # Destinataire = même que l'expéditeur
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
