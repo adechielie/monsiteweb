@@ -1,5 +1,9 @@
 # Fichier de configuration sensible
 .env
+config/
+Scripts/
+credentials.json
+get_refresh_token.py
 
 # Environnement virtuel
 venv_django/
@@ -12,7 +16,8 @@ __pycache__/
 # Cache et logs
 *.log
 *.pot
-
+C:\Users\adech\monsiteweb\services\static\images
+scp -r C:\Users\adech\monsiteweb\services\static\images root@195.110.34.46:/srv/monsiteweb/services/static/images
 # Fichiers/dossiers générés automatiquement
 staticfiles/
 static/
