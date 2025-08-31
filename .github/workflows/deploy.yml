@@ -17,29 +17,29 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-          set -e
+            set -e
+            # 1. Crée/écrase le .env avec les secrets GitHub
+            cat <<EOF > /srv/monsiteweb/.env
+            DEBUG=False
+            DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
+            ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
+            DB_USER=${{ secrets.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            GMAIL_CLIENT_ID=${{ secrets.GMAIL_CLIENT_ID }}
+            GMAIL_CLIENT_SECRET=${{ secrets.GMAIL_CLIENT_SECRET }}
+            GMAIL_REFRESH_TOKEN=${{ secrets.GMAIL_REFRESH_TOKEN }}
+            CONTACT_EMAIL=${{ secrets.CONTACT_EMAIL }}
+            EOF
+           
+            # Fixe les permissions
+            chown deploy:www-data /srv/monsiteweb/.env
+            chmod 640 /srv/monsiteweb/.env
 
-          # 1. Crée/écrase le .env avec les secrets GitHub
-          cat > /srv/monsiteweb/.env <<EOF
-DEBUG=False
-DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
-ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
-DB_USER=${{ secrets.DB_USER }}
-DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-GMAIL_CLIENT_ID=${{ secrets.GMAIL_CLIENT_ID }}
-GMAIL_CLIENT_SECRET=${{ secrets.GMAIL_CLIENT_SECRET }}
-GMAIL_REFRESH_TOKEN=${{ secrets.GMAIL_REFRESH_TOKEN }}
-CONTACT_EMAIL=${{ secrets.CONTACT_EMAIL }}
-EOF
 
-            # 2. Fixe les permissions
-            sudo chown deploy:www-data /srv/monsiteweb/.env
-            sudo chmod 640 /srv/monsiteweb/.env
-
-            # 3. Vérifie le contenu du .env
             echo "== Contenu de .env =="
             cat /srv/monsiteweb/.env
+            
 
-          # 4. Exécute le script de déploiement (git pull + migrations + collectstatic + restart Apache)
-          cd /srv/monsiteweb
-          ./deploy.sh
+            # 3. Exécute le script de déploiement (ex: git pull + migrations)
+            cd /srv/monsiteweb
+            ./deploy.sh
