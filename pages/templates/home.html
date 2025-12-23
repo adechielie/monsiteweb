@@ -29,13 +29,14 @@
         <h1 class="display-4 fw-bold mb-4">Bienvenue sur mon site !</h1>
 
         <p class="lead fw-semibold mb-3">
-            Je suis Elie ADECHI, expert en data. De la construction de pipelines ETL à la création de rapports et tableaux de bord, j'interviens à chaque étape de vos projets.
+            Je suis Elie ADECHI, Data Engineer BI & Big Data. <br>
+            De la construction de vos pipelines et jobs ETL, à la création de rapports et Dashboard, j'interviens à chaque étape de vos projets de data platform.
         </p>
 
         <p class="lead fw-semibold mb-4">
             Vous travaillez avec des outils puissants de la Big Data ou de la BI tels que 
-            <strong>Microsoft Fabric</strong>, <strong>Azure Data Factory</strong>, <strong>Power BI</strong>, <strong>Informatica</strong>, <strong>PowerCenter</strong>, des DWH tels que <strong>SQL Server</strong> / <strong>Oracle</strong> / <strong>PostgreSQL</strong> ?<br>
-            Je mets à votre service mon expertise pour vous accompagner dans l’exploitation optimale de ces solutions.
+            <strong>Microsoft Fabric</strong>, <strong>Databricks</strong>, <strong>Azure Data Factory</strong>, <strong>Power BI</strong>, <strong>Informatica</strong> ?<br>
+            Je mets à votre service mon expertise certifiée pour vous accompagner dans l’exploitation optimale de ces solutions.
         </p>
 
         <div class="text-center">
@@ -57,8 +58,8 @@
             <a href="{% url 'services' %}#services-top-eng" class="text-decoration-none col-lg-6" style="cursor: pointer;"> 
                 <h2 class="text-center mb-4 fw-bold text-success">Data Engineering</h2>
                 <p class="lead text-info fw-semibold" style="color: black !important;">
-                    Je vous accompagne dans la conception, la mise en œuvre et l'industrialisation de traitements ETL automatisés,
-                    fiables et évolutifs, pour garantir une gestion optimale de vos données.
+                    A l'ère du Cloud unifié et de l'IA, je vous accompagne dans la conception, la mise en œuvre et l'industrialisation de traitements ETL automatisés,
+                    fiables et évolutifs, pour garantir une gestion et une disponibilité optimale de vos données. 
                 </p>
             </a>
 
@@ -89,7 +90,7 @@
             <a href="{% url 'services' %}#services-top-ana" class="text-decoration-none col-lg-6" style="cursor: pointer;">
                 <h2 class="text-center mb-4 fw-bold text-success">Data Analysis</h2>
                 <p class="lead text-info fw-semibold" style="color: black !important;">
-                    Je vous accompagne dans la conception de rapports et dashboard interactifs
+                    L'exploitation de vos données sera la clé pour vous faire passer un cap dans un monde de plus en plus "data dépendant". Je vous accompagne dans la conception de modèles sémantiques, rapports et dashboard interactifs
                     avec une expertise certifiée sur Microsoft Power BI.
                 </p>
             </a>
@@ -118,6 +119,79 @@
     </div>
 </div>
 
+<!-- SECTION : ATP Predictions (NOUVEAU) -->
+<style>
+    .feature-card {
+        background: linear-gradient(135deg, #1E3EA6 0%, #2563eb 100%);
+        padding: 3rem 2rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(30, 62, 166, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 3rem auto;
+        max-width: 800px;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(30, 62, 166, 0.4);
+    }
+    
+    .card-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .feature-card h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    
+    .btn-primary-custom {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: white;
+        color: #1E3EA6;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn-primary-custom:hover {
+        background: #f8f9fa;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        color: #1E3EA6;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="feature-card">
+        <div class="card-icon">🎾</div>
+        <h3>Prédictions ATP</h3>
+        <p>Découvrez notre outil de prédiction de matchs de tennis propulsé par l'IA.<br>
+        Modèle Machine Learning entraîné sur 60 000+ matchs avec 96.61% de précision.</p>
+        <a href="{% url 'predictions_atp' %}" class="btn-primary-custom">Essayer maintenant →</a>
+    </div>
+</div>
 
 <!-- SECTION : Pourquoi faire appel à un expert Data -->
 <div class="container text-center my-0">
@@ -132,20 +206,20 @@
                     <div class="col-md-6">
                         <h5 class="fw-bold text-success">Modélisation de workflows performants</h5>
                         <p class="fs-6">
-                           L'expert data structure votre projet dès le départ avec une modélisation claire des workflows de données.<br>
-                           Il s’attèle à l’optimisation des requêtes et à la préconisation des outils les mieux adaptés pour transformer vos besoins métiers en solutions techniques.
+                           L'expert data structure votre projet dès le départ avec une modélisation et une architecture claire des workflows de données.<br>
+                           Il s’attèle à l’optimisation et à la préconisation des outils les mieux adaptés pour avoir la meilleure performance et les coûts les plus réduits pour transformer vos besoins métiers en solutions techniques.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <h5 class="fw-bold text-success">Monitoring et supervision en temps réel</h5>
                         <p class="fs-6">
-                            Une surveillance constante des tâches permet de détecter rapidement les anomalies. Le monitoring assure stabilité et performance. Pour cela, l’expert garantit une remontée et un traçage permanent des logs à chaque étape du traitement.
+                            Une surveillance constante des tâches permet de détecter rapidement les anomalies. Le monitoring assure stabilité, performance. Pour cela, l’expert garantit une analyse permanente des logs à chaque étape du traitement.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <h5 class="fw-bold text-success">Planification intelligente des tâches</h5>
                         <p class="fs-6">
-                            Grâce à une planification rigoureuse et automatisée des tâches, vos flux ou raffraichissement de données s’exécutent de manière optimale, évitant collisions et retards.
+                            Grâce à une planification rigoureuse et automatisée des tâches, vos flux ou raffraichissement de données s’exécutent de manière optimale en batch ou en streaming. Cela garantit une fiabilité dans l'orchestration des tâches et la disponibilité des données en évitant collisions et retards.
                         </p>
                     </div>
                     <div class="col-md-6">
