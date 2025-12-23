@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'pages',      # Application pour la gestion des pages (Accueil, À propos)
     'services',   # Application pour les services
     'contact',    # Application pour le formulaire de contact
-    'predictions',    # Application pour prédire les résultats d'un match de tennis ATP
+    'prediction',    # Application pour prédire les résultats d'un match de tennis ATP
 ]
 
 MIDDLEWARE = [
